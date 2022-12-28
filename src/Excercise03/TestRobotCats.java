@@ -28,6 +28,9 @@ public class TestRobotCats {
                 BatteryRobotCatOld2
         ));
 
+        SolarRobotCat solarRobotCat = new SolarRobotCat();
+        solarRobotCat.charge();
+        BatteryRobotCatNew1.charge();
     }
 
     public void checkCatTypes(List<BatteryRobotCat> batteryRobotCats){

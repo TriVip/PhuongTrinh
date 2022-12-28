@@ -1,18 +1,8 @@
 package Excercise02;
 
-public class CEO {
-    private double salary;
-
-    public CEO(double salary){
-        this.salary = salary;
-    }
-
+public class CEO extends Employee{
+    @Override
     public double getSalary() {
-        return salary;
+        return 100000;
     }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
 }

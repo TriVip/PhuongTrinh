@@ -1,8 +1,8 @@
 package Excercise02;
 
-public class Manager extends Employee {
+public class StandardEmployee extends Employee{
     @Override
     public double getSalary() {
-        return 50000;
+        return 20000;
     }
 }

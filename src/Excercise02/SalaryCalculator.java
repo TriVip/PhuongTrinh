@@ -1,32 +1,38 @@
 package Excercise02;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class SalaryCalculator {
 
     public static void main(String[] args) {
-        CEO ceo = new CEO(20000);
 
+        CEO ceo = new CEO();
         Manager manager = new Manager();
-        manager.setSalary(10000);
+        StandardEmployee standardEmployee1 = new StandardEmployee();
+        StandardEmployee standardEmployee2 = new StandardEmployee();
 
-        NormalEmployee employee1 = new NormalEmployee();
-        employee1.setSalary(2000);
+        SalaryCalculator salaryCalculator = new SalaryCalculator();
+        List<Employee> employees = new ArrayList<>();
+        employees.add(ceo);
+        employees.add(manager);
+        employees.add(standardEmployee1);
+        employees.add(standardEmployee2);
 
-        NormalEmployee employee2 = new NormalEmployee();
-        employee2.setSalary(1500);
+        double totalSalaries;
+        totalSalaries = salaryCalculator.TotalSalaries(employees);
+        System.out.printf("Total salaries: %f", totalSalaries);
 
-        List<NormalEmployee> normalEmployees = new ArrayList<>();
-        normalEmployees.add(employee1);
-        normalEmployees.add(employee2);
+    }
 
-        double totalSalary = ceo.getSalary() + manager.getSalary();
+    public double TotalSalaries(List<Employee> employees){
+        double totalSalaries = 0.0;
 
-        for (NormalEmployee emp : normalEmployees) {
-            totalSalary += emp.getSalary();
+        for (Employee employee : employees) {
+            totalSalaries += employee.getSalary();
         }
-
-        System.out.printf("Total Salaries: %f", totalSalary);
+        
+        return totalSalaries;
     }
 }
