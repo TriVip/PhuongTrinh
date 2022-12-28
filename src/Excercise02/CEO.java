@@ -5,4 +5,9 @@ public class CEO extends Employee{
     public double getSalary() {
         return 100000;
     }
+
+    @Override
+    public double getBonusSalary() {
+        return 0;
+    }
 }

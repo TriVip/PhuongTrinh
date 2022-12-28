@@ -8,10 +8,11 @@ public class SalaryCalculator {
 
     public static void main(String[] args) {
 
-        CEO ceo = new CEO();
-        Manager manager = new Manager();
-        StandardEmployee standardEmployee1 = new StandardEmployee();
-        StandardEmployee standardEmployee2 = new StandardEmployee();
+        Employee ceo = new CEO();
+        Employee manager = new Manager();
+        Employee standardEmployee1 = new StandardEmployee();
+        Employee standardEmployee2 = new StandardEmployee();
+
 
         SalaryCalculator salaryCalculator = new SalaryCalculator();
         List<Employee> employees = new ArrayList<>();
@@ -22,7 +23,7 @@ public class SalaryCalculator {
 
         double totalSalaries;
         totalSalaries = salaryCalculator.TotalSalaries(employees);
-        System.out.printf("Total salaries: %f", totalSalaries);
+        System.out.printf("Total salaries: %f", totalSalaries );
 
     }
 
@@ -30,7 +31,7 @@ public class SalaryCalculator {
         double totalSalaries = 0.0;
 
         for (Employee employee : employees) {
-            totalSalaries += employee.getSalary();
+            totalSalaries += employee.getSalary() + employee.getBonusSalary();
         }
         
         return totalSalaries;
