@@ -5,4 +5,9 @@ public class StandardEmployee extends Employee{
     public double getSalary() {
         return 20000;
     }
+
+//    @Override
+//    public double getBonusSalary() {
+//        return 2000;
+//    }
 }

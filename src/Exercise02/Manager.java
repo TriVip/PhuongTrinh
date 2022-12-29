@@ -5,4 +5,9 @@ public class Manager extends Employee {
     public double getSalary() {
         return 50000;
     }
+
+    @Override
+    public double getBonusSalary() {
+        return 1500;
+    }
 }
