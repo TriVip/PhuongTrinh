@@ -1,4 +1,4 @@
-package Excercise03;
+package Exercise03;
 
 public class BatteryRobotCat extends RobotCat {
     private String batteryType;

@@ -1,4 +1,4 @@
-package Excercise02;
+package Exercise02;
 
 public class Manager extends Employee {
     @Override

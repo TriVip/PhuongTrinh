@@ -1,4 +1,4 @@
-package Excercise03;
+package Exercise03;
 
 public class RobotCat {
     private String name;
